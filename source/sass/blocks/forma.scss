@@ -1,0 +1,753 @@
+.forma {
+   &__container {
+      width: 260px;
+      padding-top: 4px;
+      padding-left: 30px;
+      padding-right: 30px;
+      margin: 0 auto 55px;
+   }
+
+   &__description {
+      font-size: 13px;
+      line-height: 24px;
+      margin-bottom: 26px;
+   }
+
+   &__fieldset {
+      position: relative;
+      border: none;
+      margin: 0;
+      padding: 0;
+      font-size: 17px;
+      font-weight: 700;
+   }
+
+   &__title {
+      padding: 0;
+      color: $form-teal;
+      margin-bottom: 29px;
+      text-transform: uppercase;
+   }
+
+   &__title::before {
+      position: absolute;
+      content: "";
+      top: 11px;
+      right: 0;
+      width: 200px;
+      height: 1px;
+      background-color: $form-teal;
+   }
+
+   &__type-list {
+      list-style-type: none;
+      margin-top: 0;
+      padding-left: 0;
+      margin-bottom: 37px;
+   }
+
+   &__type-item {
+      padding-left: 60px;
+   }
+
+   &__type-item:not(:last-of-type) {
+      margin-bottom: 19px;
+   }
+
+   &__type-control {
+      position: relative;
+      display: block;
+   }
+
+   &__control-input:checked + &__type-control-mark::before {
+      position: absolute;
+      display: block;
+      content: "";
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background-color: $form-teal;
+   }
+
+   &__type-control-mark {
+      position: absolute;
+      top: 0;
+      left: -58px;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      box-shadow: 0 0 0 2px $color-dark-gray;
+      transition: 0.08s ease;
+      cursor: pointer;
+   }
+
+   &__type-control-mark:hover {
+      box-shadow: 0 0 0 2px $form-teal;
+   }
+
+   &__type-control-mark:active {
+      box-shadow: 0 0 0 2px rgba($color: #000000, $alpha: 0.3)
+   }
+
+   &__type-item:nth-of-type(2) &__type-control-mark {
+      top: -7px;
+   }
+
+   &__control-label {
+      display: inline-block;
+   }
+
+   &__type-control-label {
+      font-size: 17px;
+      line-height: 18px;
+      margin-top: 3px;
+   }
+
+   &__item:nth-of-type(2) &__type-control-label {
+      margin-top: 10px;
+   }
+
+   &__color-list {
+      list-style-type: none;
+      margin-top: 0;
+      padding-left: 0;
+      margin-bottom: 37px;
+   }
+
+   &__color-item {
+      padding-left: 61px;
+   }
+
+   &__color-item:not(:last-of-type) {
+      margin-bottom: 38px;
+   }
+
+   &__color-control {
+      position: relative;
+      display: block;
+   }
+
+   &__color-control-mark {
+      position: absolute;
+      top: -6px;
+      left: -59px;
+      width: 34px;
+      height: 34px;
+      box-shadow: 0 0 0 2px $color-dark-gray;
+      transition: 0.08s ease;
+      cursor: pointer;
+   }
+
+   &__color-control-mark:hover {
+      box-shadow: 0 0 0 2px $form-teal;
+   }
+
+   &__color-control-mark:active {
+      box-shadow: 0 0 0 2px rgba($color: #000000, $alpha: 0.3)
+   }
+
+   &__color-control-mark::before {
+      position: absolute;
+      content: "";
+      top: 16px;
+      left: 9px;
+      width: 2px;
+      height: 11px;
+      background-color: $color-black;
+      transform: rotate(-45deg);
+      display: none;
+   }
+
+   &__color-control-mark::after {
+      position: absolute;
+      content: "";
+      top: 7px;
+      left: 20px;
+      width: 2px;
+      height: 22px;
+      background-color: $color-black;
+      transform: rotate(45deg);
+      display: none;
+   }
+
+   &__color-control-input:checked + &__color-control-mark::before,
+   &__color-control-input:checked + &__color-control-mark::after {
+      display: block;
+   }
+
+   &__fieldset--fio {
+      margin-bottom: 11px;
+   }
+
+   &__title-fio {
+      margin-bottom: 23px;
+   }
+
+   &__fieldset-inner-container {
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 14px;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #000;
+   }
+
+   &__fio-label-span {
+      font-size: 17px;
+      margin-bottom: 18px;
+   }
+
+   &__label-input {
+      border: none;
+      padding: 0;
+      transition: 0.08s ease;
+   }
+
+   &__fieldset-inner-container &__fio-label-input:hover {
+      border-bottom: 2px solid $form-teal;
+   }
+
+   &__label-input:active {
+      color: $color-dark-gray;
+   }
+
+   &__label-input::placeholder {
+      font-size: 17px;
+      letter-spacing: 0.4px;
+      color: rgba($color: #000000, $alpha: 0.3);
+   }
+
+   &__label-input::placeholder:hover {
+      color: rgba($color: #000000, $alpha: 0.3);
+   }
+
+   .fio-by-father &__fieldset-inner-container {
+      padding-bottom: 13px;
+   }
+
+   &__title-phone {
+      margin-bottom: 19px;
+   }
+
+   &__phone-input-container,
+   &__mail-input-container {
+      position: relative;
+      margin-bottom: 31px;
+   }
+   &__phone-input-container:hover,
+   &__mail-input-container:hover {
+      border-bottom: 2px solid $form-teal;
+   }
+
+   &__phone-input-container:hover .icon-phone,
+   &__mail-input-container:hover .icon-mail {
+      fill: $form-teal;
+      opacity: 1;
+   }
+
+   &__phone-input-container {
+      padding-bottom: 17px;
+   }
+
+   &__mail-input-container {
+      padding-bottom: 14px;
+   }
+
+   .input-icon {
+      position: absolute;
+      opacity: 0.2;
+   }
+
+   .icon-phone {
+      top: -6px;
+      right: 7px;
+   }
+
+   &__phone-label-input::placeholder {
+      letter-spacing: -0.95px;
+   }
+
+   &__title-mail {
+      margin-bottom: 22px;
+   }
+
+   &__title-mail::before {
+      width: 182px;
+   }
+
+   .icon-mail {
+      top: -5px;
+      right: 3px;
+   }
+
+   &__mail-input-container {
+      margin-bottom: 31px;
+   }
+
+   &__title-add {
+      margin-bottom: 19px;
+   }
+
+   &__add-input-container {
+      border-bottom: none;
+      padding-bottom: 0;
+      margin-bottom: 1px;
+   }
+
+   &__add-label-input {
+      font-family: 'Open Sans';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 17px;
+      line-height: 18px;
+      color: rgba($color: #000000, $alpha: 0.3);
+      min-height: 108px;
+      padding: 17px;
+      resize: none;
+      box-shadow: inset 0 0 0 2px $color-dark-gray;
+   }
+
+   &__add-input-container:hover {
+      box-shadow: inset 0 0 0 2px $form-teal;
+   }
+
+   &__req-fields {
+      font-size: 14px;
+      margin-bottom: 29px;
+   }
+
+   &__button {
+      border: none;
+      letter-spacing: -0.65px;
+   }
+}
+
+@media (min-width: $tablet-width) {
+   .forma {
+      &__container {
+         width: 768px;
+         padding-top: 55px;
+         padding-left: 0;
+         padding-right: 0;
+         margin-bottom: 50px;
+      }
+
+      &__description {
+         font-size: 17px;
+         line-height: 30px;
+         margin-top: 0;
+         margin-bottom: 66px;
+         padding-left: 50px;
+         padding-right: 50px;
+      }
+
+      &__fieldset {
+         display: flex;
+         padding-left: 50px;
+         padding-right: 50px;
+      }
+
+      &__title {
+         position: absolute;
+         top: 11px;
+         left: 50px;
+      }
+
+      &__title::before {
+         display: none;
+      }
+
+      &__list {
+         margin-bottom: 64px;
+         margin-left: 170px;
+      }
+
+      &__type-item:not(:last-of-type) {
+         margin-bottom: 42px;
+      }
+
+      &__type-control-mark {
+         top: 0;
+         left: -58px;
+         width: 46px;
+         height: 45px;
+      }
+
+      &__type-item:nth-of-type(2) &__type-control-mark {
+         top: 0;
+      }
+
+      &__control-input:checked + &__type-control-mark::before {
+         width: 20px;
+         height: 19px;
+      }
+
+      &__type-control-label {
+         font-size: 19px;
+         line-height: 18px;
+         margin-top: 13px;
+         margin-left: 17px;
+      }
+
+      &__fieldset--color {
+         padding-top: 52px;
+         background-color: $color-gray-footer;
+      }
+
+      &__color-title {
+         position: absolute;
+         top: 63px;
+         left: 50px;
+      }
+
+      &__color-list {
+         margin-bottom: 52px;
+         width: 496px;
+         margin-left: 167px;
+         display: flex;
+         flex-wrap: wrap;
+         gap: 28px;
+      }
+
+      &__color-item {
+         width: 173px;
+         height: 48px;
+      }
+
+      &__color-item:not(:last-of-type) {
+         margin-bottom: 0;
+      }
+
+      &__color-control-mark {
+         top: 0;
+         left: -59px;
+         width: 48px;
+         height: 48px;
+      }
+
+      &__color-control-mark::before {
+         top: 22px;
+         left: 13px;
+         width: 2px;
+         height: 15px;
+      }
+
+      &__color-control-mark::after {
+         top: 10px;
+         left: 28px;
+         width: 2px;
+         height: 30px;
+      }
+
+      &__color-control-label {
+         font-size: 19px;
+         line-height: 18px;
+         margin-top: 13px;
+         margin-left: 21px;
+      }
+
+      &__color-item:nth-of-type(2) &__control-label,
+      &__color-item:nth-of-type(3) &__control-label,
+      &__color-item:nth-of-type(4) &__control-label {
+         margin-top: 15px;
+         margin-left: 20px;
+      }
+
+      &__color-item:nth-of-type(6) &__control-label {
+         margin-left: 20px;
+      }
+
+      &__fieldset--fio {
+         margin-bottom: 15px;
+      }
+
+      &__title-fio {
+         top: 64px;
+         padding-right: 20px;
+      }
+
+      &__title-fio::before {
+         // display: block;
+      }
+
+      &__fio-list {
+         margin-top: 62px;
+         margin-left: 167px;
+         // margin-bottom: 63px;
+         width: 100%;
+      }
+
+      &__fieldset-inner-container {
+         flex-direction: row;
+         border-bottom: none;
+         margin-bottom: 22px;
+      }
+
+      &__fieldset-inner-container:not(:last-of-type) {
+         margin-bottom: 5px;
+      }
+
+      &__fio-label-input {
+         padding-top: 2px;
+         padding-left: 18px;
+         padding-bottom: 14px;
+         margin-top: 7px;
+         margin-left: 25px;
+         width: 100%;
+         border-bottom: 2px solid #000;
+      }
+
+      &__fio-label-span {
+         font-size: 19px;
+         margin-bottom: 0;
+      }
+
+      &__label-input::placeholder {
+         font-size: 19px;
+         line-height: 18px;
+         padding-left: 0;
+         letter-spacing: 0.4px;
+         color: rgba($color: #000000, $alpha: 0.3);
+      }
+
+      &__fieldset--phone {
+         padding-top: 67px;
+         background-color: $color-gray-footer;
+      }
+
+      &__title-phone {
+         top: 62px;
+      }
+
+      &__phone-input-container {
+         width: 484px;
+         margin-left: 167px;
+         padding-left: 17px;
+         padding-bottom: 13px;
+         border-bottom: 2px solid #000;
+      }
+
+      &__phone-label-input::placeholder {
+         letter-spacing: -1px;
+      }
+
+      &__phone-label-input,
+      &__mail-label-input {
+         display: inline-block;
+         line-height: 20px;
+         width: 100%;
+         background-color: $color-gray-footer;
+      }
+
+      .icon-phone {
+         right: 26px;
+      }
+
+      &__fieldset--mail {
+         padding-top: 19px;
+         padding-bottom: 28px;
+         background-color: $color-gray-footer;
+      }
+
+      &__title-mail {
+         top: 16px;
+      }
+
+      &__mail-input-container {
+         width: 484px;
+         margin-left: 167px;
+         padding-left: 17px;
+         padding-bottom: 13px;
+         border-bottom: 2px solid #000;
+      }
+
+      .icon-mail {
+         top: -1px;
+         right: 22px;
+      }
+
+      &__fieldset--add {
+         padding-top: 50px;
+      }
+
+      &__title-add {
+         top: 66px;
+      }
+
+      &__add-input-container {
+         width: 501px;
+         margin-left: 150px;
+         margin-bottom: 53px;
+         padding-left: 17px;
+      }
+
+      &__add-label-input {
+         font-size: 19px;
+         width: 100%;
+      }
+
+      &__req-button-container {
+         width: 668px;
+         display: flex;
+         justify-content: space-between;
+         flex-direction: row-reverse;
+         align-items: center;
+         margin: 0 auto;
+      }
+
+      &__req-fields {
+         font-size: 17px;
+         margin: 0;
+         padding: 0;
+      }
+
+      &__button {
+         width: 230px;
+         font-size: 17px;
+         padding-top: 15px;
+         letter-spacing: 0;
+      }
+   }   
+}
+
+@media (min-width: $desktop-width) {
+   .forma {
+      &__container {
+         width: 1150px;
+         padding-top: 100px;
+      }
+
+      &__description {
+         font-size: 17px;
+         line-height: 30px;
+         margin-top: 0;
+         margin-bottom: 66px;
+         padding-left: 225px;
+         padding-right: 225px;
+      }
+
+      &__fieldset--color {
+         padding-top: 50px;
+      }
+
+      &__title {
+         position: absolute;
+         letter-spacing: -0.1px;
+      }
+
+      &__type-title {
+         top: 12px;
+         left: 111px;
+      }
+
+      &__type-list {
+         margin-bottom: 63px;
+         margin-left: 176px;
+      }
+
+      &__type-control-label {
+         margin-left: 19px;
+      }
+
+      &__fieldset--color {
+         padding-bottom: 54px;
+      }
+
+      &__color-list {
+         margin-left: 175px;
+         margin-bottom: 0;
+         width: 100%;
+      }
+
+      &__color-title {
+         top: 64px;
+         left: 111px;
+      }
+
+      &__color-item:nth-of-type(3n) &__color-control-mark {
+         left: -57px;
+      }
+
+      &__color-control-label {
+         margin-top: 18px;
+         margin-left: 21px;
+      }
+
+      &__color-item:nth-of-type(2) &__control-label,
+      &__color-item:nth-of-type(3) &__control-label,
+      &__color-item:nth-of-type(4) &__control-label {
+         margin-top: 18px;
+         margin-left: 20px;
+      }
+
+      &__color-item:nth-of-type(3n) &__control-label {
+         margin-left: 22px;
+      }
+
+      &__color-item:nth-of-type(4) &__control-label,
+      &__color-item:nth-of-type(5) &__control-label,
+      &__color-item:nth-of-type(6) &__control-label {
+         margin-top: 17px;
+      }
+
+      &__title-fio {
+         top: 65px;
+         left: 111px;
+         padding-right: 0;
+      }
+
+      &__fio-list {
+         width: 100%;
+         margin-top: 62px;
+         margin-left: 177px;
+         margin-right: 175px;
+      }
+
+      &__title-phone {
+         left: 112px;
+         top: 63px;
+      }
+
+      &__phone-input-container,
+      &__mail-input-container {
+         width: 683px;
+         margin-left: 175px;
+      }
+
+      &__phone-label-input::placeholder {
+         letter-spacing: -1.1px;
+      }
+
+      .icon-phone {
+         right: 8px;
+      }
+
+      &__title-mail {
+         top: 16px;
+         left: 112px;
+      }
+
+      .icon-mail {
+         right: 4px;
+      }
+
+      &__title-add {
+         left: 112px;
+      }
+
+      &__add-input-container {
+         width: 700px;
+         margin-left: 158px;
+         margin-bottom: 49px;
+      }
+
+      &__req-button-container {
+         width: 700px;
+      }
+
+   }
+}

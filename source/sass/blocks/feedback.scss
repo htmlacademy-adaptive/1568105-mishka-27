@@ -1,0 +1,212 @@
+.feedback {
+   &__container {
+      position: relative;
+      min-width: 260px;
+      margin: 0 auto;
+      padding: 0 30px 58px;
+   }
+
+   &__container::before {
+      position: absolute;
+      content: "";
+      left: 0;
+      bottom: 22px;
+      width: 100%;
+      height: 6px;
+      background-image: url('../img/mobile-wave.svg');
+      background-size: contain;
+      background-repeat: repeat-x;
+   }
+
+   &__title {
+      margin-top: 0;
+      margin-bottom: 14px;
+   }
+
+   &__list {
+      list-style-type: none;
+      padding-left: 0;
+      margin-top: 0;
+   }
+
+   &__item {
+      display: flex;
+      flex-direction: column;
+   }
+
+   &__item-text {
+      order: -1;
+      margin: 0 0 33px;
+      line-height: 30px;
+   }
+
+   &__item-title {
+      margin: 0 0 123px;
+   }
+
+   &__item-name {
+      display: inline-block;
+      letter-spacing: -0.3px;
+      margin-bottom: 6px;
+   }
+
+   &__item-nickname {
+      font-weight: 400;
+      letter-spacing: -0.3px;
+   }
+
+   &__button-container {
+      position: absolute;
+      bottom: 163px;
+   }
+
+   &__button {
+      display: inline-block;
+      padding: 0;
+      margin: 0;
+      border: none;
+      width: 130px;
+      height: 52px;
+      background: url("../img/button-arrow-left.svg") 48% / 50px 26px no-repeat;
+      box-shadow: inset 0 0 0 1px $color-gray-nav-border;
+   }
+
+   &__button--forth {
+      transform: rotate(180deg);
+      margin-left: -4px;
+      background-position: 52%;
+   }
+}
+
+@media (min-width: $tablet-width) {
+   .feedback {
+      &__container {
+         padding: 104px 50px 58px;
+         background: url("../img/feedback-bg.jpg") top 10px left / 350px 457px no-repeat;
+      }
+
+      &__container::before {
+         height: 17px;
+         bottom: -17px;
+      }
+
+      &__title {
+         font-size: $title-fontsize-tablet;
+         margin-bottom: 48px;
+      }
+
+      &__item-text {
+         font-size: 17px;
+         line-height: 30px;
+         margin: 0 0 60px;
+      }
+
+      &__item-text-mobile-brake {
+         display: none;
+      }
+
+      &__item-title {
+         margin: 0 0 47px;
+      }
+
+      &__item-name {
+         letter-spacing: 0.3px;
+      }
+
+      &__item-link {
+         position: absolute;
+         top: 89px;
+         right: 50px;
+         width: 175px;
+         letter-spacing: -0.6px; //PP
+      }
+
+      &__button-container {
+         right: 54px;
+         bottom: 118px;
+      }
+
+      &__button {
+         width: 81px;
+         height: 52px;
+         background: url("../img/button-arrow-left.svg") 48% / 50px 26px no-repeat;
+         box-shadow: none;
+      }
+      
+      &__button--forth {
+         margin-left: 1px;
+      }
+   }
+}
+
+@media (min-width: $desktop-width) {
+   .feedback {
+      &::before {
+         height: 23px;
+         width: 1050px;
+         left: 50px;
+         bottom: 6px;
+      }
+
+      &__container {
+         width: 875px;
+         padding: 110px 50px 58px 225px;
+         background: url("../img/feedback-bg.jpg") top 17px left 50px / 350px 457px no-repeat;
+      }
+
+      &__container::before {
+         height: 23px;
+         width: 1050px;
+         left: 50px;
+         bottom: -70px;
+      }
+
+      &__title {
+         font-size: $title-fontsize-desktop;
+         margin-bottom: 48px;
+      }
+
+      &__item-text {
+         margin: 0 0 43px;
+      }
+
+      &__item-text-mobile-brake {
+         display: block;
+      }
+
+      .desktop-brake {
+         display: none;
+      }
+
+      &__item-title {
+         margin-left: -1px;
+      }
+
+      &__item-name {
+         font-size: 17px;
+         line-height: 24px;
+         letter-spacing: 0.05px;
+      }
+
+      &__item-link {
+         top: 96px;
+      }
+
+      &__button-container {
+         bottom: 120px;
+      }
+
+      &__button {
+         cursor: pointer;
+         transition: 0.1s ease-out;
+      }
+
+      &__button:hover {
+         opacity: 60%;
+      }
+
+      &__button:active {
+         opacity: 30%;
+      }
+   }
+}

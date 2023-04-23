@@ -1,237 +1,238 @@
 .week-product {
-   position: relative;
-   min-width: 320px;
-   max-width: 1150px;
-   margin: 0 auto;
-   background-color: $color-white;
+  position: relative;
+  min-width: 320px;
+  max-width: 1150px;
+  margin: 0 auto;
+  background-color: $color-white;
 
-   &::after {
-      position: absolute;
-      content: "";
-      left: 0;
-      bottom: -6px;
-      width: 100%;
-      height: 6px;
-      background-image: url('../img/mobile-wave.svg');
-      background-size: contain;
-      background-repeat: repeat-x;
-   }
+  &::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 6px;
+    background-image: url('../img/mobile-wave.svg');
+    background-size: contain;
+    background-repeat: repeat-x;
+  }
 
-   &__container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 29px 30px 36px;
-   }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 29px 30px 36px;
+  }
 
-   &__title-container {
-      min-width: 260px;
-      align-self: left;
-   }
+  &__title-container {
+    min-width: 260px;
+    align-self: left;
+  }
 
-   &__title {
-      font-size: $title-fontsize-mobile;
-      margin: 0 0 3px;
-   }
+  &__title {
+    font-size: $title-fontsize-mobile;
+    margin: 0 0 3px;
+  }
 
-   &__tag {
-      font-weight: 700;
-      font-size: 17px;
-      line-height: 20px;
-      text-transform: uppercase;
-      color: $color-week-product;
-      margin-top: 0;
-      margin-bottom: 1px; //PP
-   }
+  &__tag {
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: $color-week-product;
+    margin-top: 0;
+    margin-bottom: 1px; //PP
+  }
 
-   &__tag-brake {
-      display: none;
-   }
+  &__tag-brake {
+    display: none;
+  }
 
-   picture {
-      order: 1;
-   }
+  picture {
+    order: 1;
+  }
 
-   &__pic {
-      order: 1;
-      margin-bottom: 6px;
-      width: 100%;
-      height: auto;
-   }
+  &__pic {
+    order: 1;
+    margin-bottom: 6px;
+    width: 100%;
+    height: auto;
+  }
 
-   &__description {
-      line-height: 24px;
-      margin-bottom: 21px;
-   }
+  &__description {
+    line-height: 24px;
+    margin-bottom: 21px;
+  }
 
-   &__list {
-      margin-top: 0;
-      margin-bottom: 28px;
-   }
-   
-   &__item {
-      display: flex;
-      min-width: 260px;
-      padding-top: 7px;
-      padding-bottom: 13px;
-      box-shadow: inset 0 -1px 0 0 $color-gray-nav-border;
-   }
+  &__list {
+    margin-top: 0;
+    margin-bottom: 28px;
+  }
 
-   &__item-property {
-      width: 98px;
-   }
+  &__item {
+    display: flex;
+    min-width: 260px;
+    padding-top: 7px;
+    padding-bottom: 13px;
+    box-shadow: inset 0 -1px 0 0 $color-gray-nav-border;
+  }
 
-   &__item-volume {
-      margin: 0;
-   }
+  &__item-property {
+    width: 98px;
+  }
 
-   &__price,
-   &__order-link {
-      order: 2;
-   }
+  &__item-volume {
+    margin: 0;
+  }
 
-   &__price {
-      font-size: 17px;
-      font-weight: 700;
-      margin-right: 2px; //PP
-      margin-bottom: 24px;
-   }
+  &__price,
+  &__order-link {
+    order: 2;
+  }
+
+  &__price {
+    font-size: 17px;
+    font-weight: 700;
+    margin-right: 2px; //PP
+    margin-bottom: 24px;
+  }
 }
 
 @media (min-width: $tablet-width) {
-   .week-product {
-      width: 100%;
+  .week-product {
+    width: 100%;
 
-      &::after {
-         height: 17px;
-         bottom: -35px;
-      }
+    &::after {
+        height: 17px;
+        bottom: -35px;
+    }
 
-      &__container {
-         position: relative;
-         align-items: start;
-         padding: 65px 50px 36px;
-      }
+    &__container {
+        position: relative;
+        align-items: start;
+        padding: 65px 50px 36px;
+    }
 
-      &__title-container {
-         align-self: start; 
-         width: calc(100% - 27px);
-         display: flex;
-         justify-content: space-between;
-         margin-bottom: 19px;
-      }
+    &__title-container {
+        align-self: start;
+        width: calc(100% - 27px);
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 19px;
+    }
 
-      &__title {
-         font-size: $title-fontsize-tablet;
-         line-height: 28px;
-         margin-bottom: 30px;
-      }
+    &__title {
+        font-size: $title-fontsize-tablet;
+        line-height: 28px;
+        margin-bottom: 30px;
+    }
 
-      &__tag {
-         text-align: center;
-         line-height: 17px;
-         margin-top: -5px;
-      }
+    &__tag {
+        text-align: center;
+        line-height: 17px;
+        margin-top: -5px;
+    }
 
-      &__tag-brake {
-         display: block;
-      }
+    &__tag-brake {
+        display: block;
+    }
 
-      picture {
-         position: absolute;
-         top: 154px;
-         right: 50px;
-      }
+    picture {
+        position: absolute;
+        top: 154px;
+        right: 50px;
+    }
 
-      &__description {
-         display: inline-block;
-         font-size: 17px;
-         line-height: 30px;
-         width: 290px;
-         margin-top: 0;
-         margin-bottom: 40px;
-      }
+    &__description {
+        display: inline-block;
+        font-size: 17px;
+        line-height: 30px;
+        width: 290px;
+        margin-top: 0;
+        margin-bottom: 40px;
+    }
 
-      &__list {
-         width: 292px;
-         margin-bottom: 36px;
-      }
+    &__list {
+        width: 292px;
+        margin-bottom: 36px;
+    }
 
-      &__item-property {
-         width: 97px;
-      }
+    &__item-property {
+        width: 97px;
+    }
 
-      &__price {
-         font-size: 20px;
-         margin-left: 71px;
-         margin-bottom: 31px;
-      }
+    &__price {
+        font-size: 20px;
+        margin-left: 71px;
+        margin-bottom: 31px;
+    }
 
-      &__order-link {
-         width: 292px;
-         letter-spacing: -0.5px; //PP
-      }
-   }
+    &__order-link {
+        width: 292px;
+        letter-spacing: -0.5px; //PP
+        // cursor: pointer;
+    }
+  }
 }
 
 @media (min-width: $desktop-width) {
-   .week-product {
-      // width: 1150px;
+  .week-product {
+    // width: 1150px;
 
-      &::after {
-         height: 23px;
-         width: 1050px;
-         left: 50px;
-         // right: 0;
-         bottom: -62px;
-         background-repeat: no-repeat;
-      }
+    &::after {
+        height: 23px;
+        width: 1050px;
+        left: 50px;
+        // right: 0;
+        bottom: -62px;
+        background-repeat: no-repeat;
+    }
 
-      &__container {
-         padding-top: 149px;
-      }
+    &__container {
+        padding-top: 149px;
+    }
 
-      &__title-container {
-         margin-left: 175px;
-         width: auto;
-         z-index: 3;
-         margin-bottom: 20px;
-      }
+    &__title-container {
+        margin-left: 175px;
+        width: auto;
+        z-index: 3;
+        margin-bottom: 20px;
+    }
 
-      &__title {
-         font-size: $title-fontsize-desktop;
-      }
+    &__title {
+        font-size: $title-fontsize-desktop;
+    }
 
-      &__tag {
-         position: absolute;
-         left: 97px;
-         margin-top: -7px;
-      }
+    &__tag {
+        position: absolute;
+        left: 97px;
+        margin-top: -7px;
+    }
 
-      picture {
-         top: 73px;
-      }
+    picture {
+        top: 73px;
+    }
 
-      &__description {
-         margin-left: 175px;
-         margin-bottom: 52px;
-      }
+    &__description {
+        margin-left: 175px;
+        margin-bottom: 52px;
+    }
 
-      &__list {
-         margin-left: 175px;
-         margin-bottom: 90px;
-      }
+    &__list {
+        margin-left: 175px;
+        margin-bottom: 90px;
+    }
 
-      &__item-property {
-         width: 98px;
-      }
+    &__item-property {
+        width: 98px;
+    }
 
-      &__price {
-         margin-left: 248px;
-      }
+    &__price {
+        margin-left: 248px;
+    }
 
-      &__order-link {
-         margin-left: 175px;
-      }
-   }
+    &__order-link {
+        margin-left: 175px;
+    }
+  }
 }

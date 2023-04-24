@@ -1,0 +1,331 @@
+.main-header {
+   position: relative;
+   min-width: 320px;
+   background-color: $color-welcome-sky;
+   display: flex;
+   flex-direction: column;
+
+   &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 89px;
+      background-color: $color-white;
+   }
+
+   &__logo {
+      align-self: center;
+      display: inline-block;
+      padding-top: 22px;
+      padding-bottom: 18px;
+      margin-right: 2px; //PP
+      z-index: 3;
+   }
+
+   &__toggle {
+      display: none;
+   }
+
+   &__nav-list {
+      display: flex;
+      flex-direction: column;
+      list-style-type: none;
+      text-align: left;
+      padding: 0;
+      margin: 0 auto;
+      display: none;
+   }
+
+   &__nav-item {
+      display: block;
+      box-shadow:
+         0px 1px 0px $color-gray-nav-border,
+         inset 0px 1px 0px $color-gray-nav-border;
+   }
+
+   &__nav-item-link {
+      display: inline-block;
+      font-family: 'Open Sans', sans-serif;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 17px;
+      color: $color-black; 
+      text-decoration: none;
+      padding-top: 30px;
+      padding-bottom: 26px;
+      margin-left: 76px;
+      transition: 0.2s ease-out;
+   }
+
+   &__nav-item--new,
+   &__nav-item--sale {
+      display: none;
+   }
+
+   &__bottom-line {
+      display: none;
+   }
+
+   &__free-delievery {
+      display: none;
+   }
+}
+
+.search {
+   margin-left: 32px;
+}
+
+.bin {
+   margin-left: 30px;
+   
+}
+
+.nav-icon {
+   fill:rgba(0, 0, 0, 0.2);
+}
+
+.icon-search {
+   margin-right: 22px;
+}
+
+.icon-bin {
+   margin-right: 21px;
+}
+
+.catalog-header {
+   background-color: $color-gray-footer;
+
+   &::before {
+      height: 79px;
+   }
+}
+
+.form-header {
+   background-color: $color-gray-footer;
+
+   &::before {
+      height: 79px;
+   }
+}
+
+@media (min-width: $tablet-width) {
+   .main-header {
+      width: 100%;
+
+      &__logo {
+         align-self: start;
+         padding-left: 48px;
+         margin-right: auto;
+      }
+
+      &__logo {
+         margin-left: 2px;
+      }
+
+      &__bottom-line {
+         display: block;
+         margin: 0;
+         margin-top: -2px;
+         border: 0.5px solid $color-gray-nav-border;
+      }
+
+      &__nav-list {
+         display: flex;
+         flex-direction: row;
+         flex-wrap: wrap;
+         width: 350px;
+         margin: 0 auto 0 50px;
+      }
+
+      &__nav-item {
+         box-shadow: none;
+      }
+
+      &__nav-item--search {
+         position: absolute;
+         top: 0;
+         right: 315px;
+         box-shadow: none;
+         border-left: 1px solid $color-gray-nav-border;
+      }
+   
+      &__nav-item--bin {
+         position: absolute;
+         top: 0;
+         right: 0;
+         box-shadow: none;
+         border-left: 1px solid $color-gray-nav-border;
+      }
+
+      &__nav-item-link {
+         padding-top: 22px;
+         padding-bottom: 33px;
+         margin-left: 0;
+      }
+
+      .search {
+         padding: 36px 31px 31px 33px;
+      }
+
+      .icon-search {
+         margin-right: 0;
+      }
+
+      &__search-text {
+         display: none;
+      }
+
+      .bin {
+         padding-top: 34px;
+         padding-right: 50px;
+         padding-left: 31px;
+      }
+   
+      .icon-bin {
+         margin-right: 26px;
+      }
+
+      .to-catalog, .knitting {
+         font-size: 15px;
+         margin-right: 37px;
+         padding-bottom: 22px;
+      }
+
+      &__free-delievery {
+         position: absolute;
+         top: 96px;
+         right: 50px;
+         display: block;
+      }
+   }
+
+   .catalog-header {
+      &::before {
+         height: 88px;
+      }
+   }
+
+   .form-header {
+      &::before {
+         height: 88px;
+      }
+
+      &__logo {
+         margin-left: 0; //PP
+      }
+   }
+}
+
+@media (min-width: $desktop-width) {
+   .main-header {
+      width: 1150px;
+      margin: 0 auto;
+
+      &__logo {
+         align-self: center;
+         margin: 0;
+         margin-right: 1px; //PP
+         padding: 9px 0 5px;
+         transition: 0.11s ease-out;
+      }
+
+      &__logo:hover {
+         opacity: 0.6;
+      }
+
+      &__logo:active {
+         opacity: 0.3;
+      }
+
+      &__nav-item-link {
+         transition: 0.11s ease-out;
+      }
+
+      &__nav-item:not(:nth-of-type(4)):hover {
+         opacity: 0.6;
+      }
+
+      &__nav-item:nth-of-type(3):hover .nav-icon {
+         fill: rgba(99, 209, 187, 1);
+      }
+
+      &__nav-item:nth-of-type(4):hover .nav-icon {
+         fill: rgba(99, 209, 187, 1);
+      }
+
+      &__nav-item:nth-of-type(4):hover .search-text {
+         opacity: 0.6;
+      }
+
+      &__nav-item:not(:nth-of-type(4)):active {
+         opacity: 0.3;
+      }
+
+      &__nav-item:nth-of-type(3):active .nav-icon {
+         fill: rgba(99, 209, 187, 0.3);
+      }
+
+      &__nav-item:nth-of-type(4):active .nav-icon {
+         fill: rgba(99, 209, 187, 0.3);
+      }
+
+      &__nav-item:nth-of-type(4):active .search-text {
+         opacity: 0.3;
+      }
+
+      .search {
+         padding: 36px 34px 31px 32px;
+      }
+
+      .bin {
+         padding-right: 52px;
+      }
+
+      &__nav-item--to-catalog {
+         position: absolute;
+         top: 0;
+         left: 0;
+         border-right: 1px solid $color-gray-nav-border;
+      }
+
+      .to-catalog {
+         font-size: 17px;
+         margin: 0;
+         padding: 33px 37px 33px 50px;
+      }
+
+      &__nav-item--knitting {
+         position: absolute;
+         top: 0;
+         left: 235px;
+      }
+
+      .knitting {
+         font-size: 17px;
+         margin: 0;
+         padding: 33px 37px 33px 35px;
+      }
+
+      &__nav-item--new {
+         display: block;
+      }
+
+      .new {
+         font-size: 15px;
+         padding-top: 20px;
+         margin-left: 1px; //PP
+         margin-right: 62px;
+      }
+
+      &__nav-item--sale {
+         display: block;
+      }
+
+      .sale {
+         font-size: 15px;
+         padding-top: 20px;
+      }
+   }
+}

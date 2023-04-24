@@ -1,0 +1,143 @@
+.modal {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 5;
+  display: none;
+
+  &__container {
+    width: 260px;
+    text-align: center;
+    padding: 30px 30px 46px;
+    background-color: $color-white;
+    box-shadow:
+      inset 0 0 0 1px #C6C6C6,
+      0px 5px 10px rgba(0, 1, 1, 0.25),
+      inset 0 0 0 1px #C6C6C6;
+    margin: 0 auto;
+    margin-top: 100px;
+  }
+
+  &__title {
+    font-size: 25px;
+    line-height: 31px;
+    text-transform: uppercase;
+    color: $color-black;
+    margin-top: 0;
+    margin-right: 2px;
+    margin-bottom: 18px;
+  }
+
+  &__fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__fieldset-title {
+    margin-bottom: 26px;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 31px;
+  }
+
+  &__control-mark {
+    width: 82px;
+    height: 52px;
+    box-shadow: inset 0 0 0 2px rgba($color: #444444, $alpha: 0.1);
+  }
+
+  &__control-input:hover + &__control-mark {
+    box-shadow: inset 0 0 0 2px rgba($color: #444444, $alpha: 0.3);;
+  }
+
+  &__control-input:checked + &__control-mark {
+    box-shadow: inset 0 0 0 2px $academy-teal;
+  }
+
+  &__control-label {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 17px;
+    margin-top: 15px;
+  }
+
+  &__item--l &__control-label {
+    margin-left: 2px; //PP
+  }
+
+  &__button {
+    font-size: 17px;
+    color: $color-white;
+    box-shadow: none;
+    background-color: $academy-teal;
+    padding-top: 15px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .modal {
+    &__container {
+      width: 360px;
+      padding: 52px 104px 46px;
+    }
+
+    &__title {
+      font-size: 30px;
+      letter-spacing: 0;
+      margin-left: 4px; //PP
+      margin-bottom: 28px;
+    }
+
+    &__title-break {
+      display: none;
+    }
+
+    &__fieldset-title {
+      font-size: 17px;
+      margin-bottom: 22px;
+    }
+
+    &__list {
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+
+    &__control-mark {
+      width: 112px;
+    }
+
+    &__item--l &__control-label {
+      margin-left: 0; //PP
+    }
+
+    &__button {
+      width: 350px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .modal {
+    &__container {
+      position: relative;
+      top: 2px;
+      left: -7px;
+      padding-bottom: 47px;
+    }
+  }
+}
+
+// .week-product__order-link:active ~ .modal {
+//   display: block;
+// }

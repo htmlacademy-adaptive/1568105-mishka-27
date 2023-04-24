@@ -1,0 +1,21 @@
+//* presets
+@import "./presets/fonts.scss";
+@import "./presets/visually-hidden.scss";
+@import "./presets/variables.scss";
+@import "./presets/titles.scss";
+
+//* blocks
+@import "./blocks/big-button.scss";
+@import "./blocks/page-body.scss";
+@import "./blocks/main-header.scss";
+@import "./blocks/welcome.scss";
+@import "./blocks/catalog-welcome.scss";
+@import "./blocks/form-welcome.scss";
+@import "./blocks/week-product.scss";
+@import "./blocks/about.scss";
+@import "./blocks/feedback.scss";
+@import "./blocks/contacts.scss";
+@import "./blocks/main-footer.scss";
+@import "./blocks/cards.scss";
+@import "./blocks/process.scss";
+@import "./blocks/modal.scss";

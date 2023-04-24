@@ -1,0 +1,243 @@
+.contacts {
+  &__container {
+    position: relative;
+    min-width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title-list-container {
+    min-width: 260px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin: 0 auto 62px;
+  }
+
+  &__title {
+    margin-top: 16px;
+    margin-bottom: 28px;
+    margin-left: -1px; //PP
+  }
+
+  &__list {
+    margin: 0;
+    margin-left: -1px; //PP
+  }
+
+  &__item {
+    display: flex;
+    font-size: 14px;
+    line-height: 30px;
+  }
+
+  &__item:not(:last-of-type) {
+    margin-bottom: 30px;
+  }
+
+  &__mail-link {
+    margin-left: -1px; //PP
+    text-decoration: none;
+    color: $color-dark-gray;
+    border-bottom: 1px solid #62D1BA;
+    padding-bottom: 2px;
+  }
+
+  &__item-value {
+    margin-left: 35px;
+  }
+
+  &__item-value--address {
+    font-style: normal;
+  }
+
+  &__brake {
+    display: block;
+  }
+
+  // &__picture-map {
+  //   display: block;
+  //   width: 100%;
+  //   height: auto;
+  //   margin-bottom: 41px;
+  // }
+
+  // &__map-pic {
+  //   position: relative;
+  //   display: block;
+  //   width: 100%;
+  //   height: auto;
+  // }
+
+  // &__map-pic::before {
+  //   position: absolute;
+  //   content: "";
+  //   right: 36%;
+  //   top: 32%;
+  //   width: 66px;
+  //   height: 100px;
+  //   background: url("../img/map-pin.svg") center / 66px 100px no-repeat red;
+  // }
+
+  &__iframe {
+    width: 100%;
+    height: 454px;
+    margin-bottom: 42px;
+  }
+
+  &__link {
+    width: calc(100% - 60px);
+    margin-bottom: 39px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .contacts {
+    &__container {
+      padding-top: 95px;
+    }
+
+    &__title-list-container {
+      position: relative;
+      width: 668px;
+      padding-left: 0;
+      padding-right: 0;
+      margin: 0 0 48px;
+      margin-left: 2px; //PP
+    }
+
+    &__title-list-container::before {
+      position: absolute;
+      content: "";
+      width: 47px;
+      height: 81px;
+      top: -33px;
+      right: 4px;
+      background: url("../img/flag.svg") center / 47px 81px no-repeat;
+    }
+
+    &__title {
+      font-size: $title-fontsize-tablet;
+      margin-top: 0;
+      margin-bottom: 59px;
+      margin-left: -1px;
+    }
+
+    &__list {
+      width: 100%;
+      display: flex;
+      font-size: 17px;
+    }
+
+    &__item {
+      min-width: 310px;
+      font-size: 17px;
+    }
+
+    &__item:not(:last-of-type) {
+      margin-right: 23px;
+    }
+
+    &__item-value {
+      margin-left: 26px;
+    }
+
+    &__mail-link {
+      padding-bottom: 3px; //PP
+    }
+
+    &__brake {
+      display: block;
+    }
+
+    &__picture-map {
+      width: 100%;
+      margin-bottom: 55px;
+    }
+
+    // &__picture-map::before {
+    //    right: 44%;
+    //    top: 30%;
+    // }
+
+    &__iframe {
+      height: 454px;
+      margin-bottom: 58px;
+    }
+
+    &__link {
+      width: 30%;
+      letter-spacing: -0.75px;
+      margin-bottom: 57px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .contacts {
+    &__container {
+      width: 1050px;
+      padding-top: 232px;
+      margin: 0 auto;
+    }
+
+    &__title-list-container {
+      width: 701px;
+      margin: 0 0 83px;
+    }
+
+    &__title-list-container::before {
+      top: -31px;
+      left: -112px;
+    }
+
+    &__title {
+      font-size: $title-fontsize-desktop;
+      margin-top: 0;
+      margin-bottom: 49px;
+    }
+
+    &__list {
+      width: 100%;
+      flex-direction: column;
+      font-size: 17px;
+    }
+
+    &__mail-link {
+      padding-bottom: 7px; //PP
+      transition: 0.1s ease-out;
+      border-bottom: 1px solid #62D1BA;
+    }
+
+    &__mail-link:hover {
+      color:#62D1BA
+    }
+
+    &__mail-link:active {
+      border-bottom: 1px solid rgba(98, 209, 186, 0.1);
+    }
+
+    &__iframe {
+      position: absolute;
+      top: 139px;
+      right: -1px;
+      width: 527px;
+      height: 457px;
+      margin-bottom: 41px;
+    }
+
+    // &__map-pic {
+    //   display: block;
+    //   width: 100%;
+    //   height: auto;
+    // }
+
+    &__link {
+      align-self: flex-start;
+      width: 230px;
+      letter-spacing: -0.75px;
+      margin-bottom: 105px;
+      margin-left: 175px;
+    }
+  }
+}
